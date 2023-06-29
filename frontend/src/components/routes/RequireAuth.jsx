@@ -3,7 +3,8 @@ import { Outlet, useLocation, Navigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useUserContext } from "../../contexts/userContext";
 import AdminNavBar from "../AdminComponents/AdminNavBar/AdminNavBar";
-import UserHome from "../UserComponents/UserHome/UserHome";
+
+import NavBar from "../NavBar/NavBar";
 
 export default function RequireAuth({ allowedRoles }) {
   const { user } = useUserContext();
@@ -20,7 +21,7 @@ export default function RequireAuth({ allowedRoles }) {
     }
     return (
       <>
-        <UserHome />
+        <NavBar />
         <Outlet />
       </>
     );

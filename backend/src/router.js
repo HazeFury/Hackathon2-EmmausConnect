@@ -27,4 +27,10 @@ const userControllers = require("./controllers/userControllers");
 
 router.post("/api/users", hashPassword, userControllers.add);
 
+// smartphone routes
+
+const smartphoneControllers = require("./controllers/smartphoneControllers");
+
+router.post("/api/smartphones", smartphoneControllers.add);
+
 module.exports = router;

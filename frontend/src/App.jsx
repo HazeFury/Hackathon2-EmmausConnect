@@ -1,12 +1,11 @@
 import { Route, Routes } from "react-router-dom";
-
 import NavBar from "./components/NavBar/NavBar";
 import Login from "./pages/Login/Login";
 import Admin from "./pages/Admin/Admin";
-
 import "./App.css";
 import RequireAuth from "./components/routes/RequireAuth";
 import Home from "./pages/Home/Home";
+import TestNewSmartphone from "./components/UserComponents/TestNewSmartphone/TestNewSmartphone";
 
 function App() {
   return (
@@ -20,6 +19,7 @@ function App() {
 
         <Route element={<RequireAuth allowedRoles="user" />}>
           <Route path="user/home" element={<Home />} />
+          <Route path="user/smartphone" element={<TestNewSmartphone />} />
         </Route>
 
         {/* <Route path="/home/" element={<Home />}>
